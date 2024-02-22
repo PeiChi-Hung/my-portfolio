@@ -37,6 +37,18 @@ export default function About() {
           </p>
         </article>
       </div>
+      <div className="lg:order-2 lg:w-1/3">
+        <img
+          src="/photo.jpg"
+          alt="photo"
+          className="w-[350px] min-w-[300px] rounded-xl transition-all hidden lg:block"
+        />
+        <img
+          src="/photo.jpg"
+          alt="photo"
+          className="w-[350px] min-w-[300px] rounded-xl transition-all hover:rotate-3 hover:scale-105 lg:hidden"
+        />
+      </div>
     </section>
   )
 }
