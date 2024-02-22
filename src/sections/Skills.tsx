@@ -8,6 +8,13 @@ import shadcnuiIcon from "@/assets/icons/shadcn-ui.png"
 import html5Icon from "@/assets/icons/html5.png"
 import viteIcon from "@/assets/icons/vite.png"
 import prettierIcon from "@/assets/icons/prettier.png"
+import pythonIcon from "@/assets/icons/python.png"
+import nodejsIcon from "@/assets/icons/nodejs.png"
+import prismaIcon from "@/assets/icons/prisma.png"
+import mongodbIcon from "@/assets/icons/mongodb.svg"
+import postmanIcon from "@/assets/icons/postman.svg"
+import gitIcon from "@/assets/icons/git.png"
+import vscodeIcon from "@/assets/icons/vscode.png"
 
 export default function Skills() {
   const data = [
@@ -53,13 +60,61 @@ export default function Skills() {
         },
       ],
     },
+    {
+      title: "Languages",
+      skills: [
+        {
+          name: "TypeScript",
+          icon: typescriptIcon,
+        },
+        {
+          name: "JavaScript",
+          icon: javascriptIcon,
+        },
+        {
+          name: "Python",
+          icon: pythonIcon,
+        },
+      ],
+    },
+    {
+      title: "Backend Development",
+      skills: [
+        {
+          name: "Node.js",
+          icon: nodejsIcon,
+        },
+        {
+          name: "Prisma ORM",
+          icon: prismaIcon,
+        },
+        {
+          name: "MongoDB",
+          icon: mongodbIcon,
+        },
+      ],
+    },
+    {
+      title: "Tools & Environment",
+      skills: [
+        {
+          name: "VS Code",
+          icon: vscodeIcon,
+        },
+        {
+          name: "Postman",
+          icon: postmanIcon,
+        },
+        { name: "Git", icon: gitIcon },
+      ],
+    },
   ]
   return (
     <section
       id="skills"
       className="flex w-full flex-col items-center text-center"
     >
-      My Skills
+      <h2 className="mb-4">My Skills</h2>
       <div className="flex flex-wrap justify-center">
         {data.map((item, index) => (
           <div key={index}>
