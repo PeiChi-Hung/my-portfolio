@@ -95,7 +95,7 @@ export default function Skills() {
       ],
     },
     {
-      title: "Tools & Environment",
+      title: "Tools",
       skills: [
         {
           name: "VS Code",
