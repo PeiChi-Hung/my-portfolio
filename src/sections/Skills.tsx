@@ -97,15 +97,15 @@ export default function Skills() {
     {
       title: "Tools",
       skills: [
-        {
-          name: "VS Code",
-          icon: vscodeIcon,
-        },
+        { name: "Git", icon: gitIcon },
         {
           name: "Postman",
           icon: postmanIcon,
         },
-        { name: "Git", icon: gitIcon },
+        {
+          name: "VS Code",
+          icon: vscodeIcon,
+        },
       ],
     },
   ]

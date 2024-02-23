@@ -8,11 +8,11 @@ export default function About() {
         <h2 className="mb-3 w-full text-center md:mb-6">About Me</h2>
         <article className="flex flex-col gap-4">
           <p>
-            I am a fresh graduate of Bachelor of Commerce and Computer Science
-            student, majoring in Business Analytics and Data Science. Throughout
-            my academic journey, I have honed my abilities in a diverse range of
-            technologies, including R, SQL, Python, GitHub, HTML/CSS, React,
-            Tableau, and Power BI.
+            Hello! I'm Patty Hung, a fresh graduate of Bachelor of Commerce and
+            Computer Science student, majoring in Business Analytics and Data
+            Science. Throughout my academic journey, I have honed my abilities
+            in a diverse range of technologies, including R, SQL, Python,
+            GitHub, HTML/CSS, React, Tableau, and Power BI.
           </p>
           <p>
             As a part of my final year project, I was actively involved in a

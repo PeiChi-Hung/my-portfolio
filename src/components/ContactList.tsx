@@ -13,19 +13,19 @@ import { cn } from "@/lib/utils"
 const contacts: Contact[] = [
   {
     name: "Email",
-    className: "bg-neutral-500 hover:bg-neutral-500",
+    className: "bg-neutral-500 hover:bg-neutral-600",
     href: "mailto:pattyhung72@gmail.com",
     icon: <MdEmail size={86} />,
   },
   {
     name: "GitHub",
-    className: "bg-neutral-500 hover:bg-neutral-500",
+    className: "bg-neutral-500 hover:bg-neutral-600",
     href: "https://github.com/PeiChi-Hung",
     icon: <FaGithubSquare size={86} />,
   },
   {
     name: "LinkedIn",
-    className: "bg-neutral-500 hover:bg-neutral-500",
+    className: "bg-neutral-500 hover:bg-neutral-600",
     href: "https://www.linkedin.com/in/pch23/",
     icon: <FaLinkedin size={86} />,
   },
