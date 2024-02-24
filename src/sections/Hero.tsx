@@ -12,9 +12,11 @@ export default function Hero() {
       </div>
 
       <h1 className="mb-4 text-[1.4rem] md:text-[2rem]">Hi, I'm Patty Hung</h1>
-      <h1>An Aspiring Software Developer</h1>
-      <div className="my-12 flex w-full flex-col gap-2 text-center lg:w-[50%]">
-        <h2>Welcome to my page!</h2>
+      <h1 className="text-center">An Aspiring Software Developer</h1>
+      <div className="my-8 flex w-full flex-col gap-2 text-center lg:w-[50%]">
+        <h2 className="mb-4 text-[1.4rem] md:text-[2rem]">
+          Welcome to my page!
+        </h2>
       </div>
       <ContactList />
     </section>
