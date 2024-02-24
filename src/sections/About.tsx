@@ -6,7 +6,7 @@ export default function About() {
     >
       <div className="order-2 lg:order-1 lg:w-2/3">
         <h2 className="mb-3 w-full text-center md:mb-6">About Me</h2>
-        <article className="flex flex-col gap-4">
+        <article className="flex flex-col gap-4 text-pretty">
           <p>
             Hello! I'm Patty Hung, a fresh graduate of Bachelor of Commerce and
             Computer Science student, majoring in Business Analytics and Data

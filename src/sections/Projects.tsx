@@ -8,6 +8,7 @@ import {
 
 import { CiFolderOn } from "react-icons/ci"
 import { VscGithubAlt } from "react-icons/vsc"
+import { project_data } from "@/data/projects"
 
 export default function Projects() {
   return (
@@ -16,32 +17,36 @@ export default function Projects() {
       className="my-4 mb-[50px] flex flex-col items-center gap-5 text-center md:mt-8"
     >
       <h2>Projects</h2>
-      <a
-        href="https://github.com/PeiChi-Hung/booking-availability"
-        target="_blank"
-      >
-        <Card className="w-[350px] text-left">
-          <div className="flex flex-row items-center justify-between pt-6 px-6">
-            <CiFolderOn size={35} style={{ color: "#172554" }} />
-            <VscGithubAlt size={20} style={{ color: "737373" }} />
-          </div>
+      <div className="flex w-full flex-row gap-4">
+        {project_data.map((project) => (
+          <a
+            href={project.link}
+            target="_blank"
+            className="group shadow-none transition-all duration-200 ease-linear hover:scale-100 hover:drop-shadow-xl"
+          >
+            <Card className="w-[350px] h-[350px] text-left ">
+              <div className="flex flex-row items-center justify-between pt-6 px-6">
+                <CiFolderOn size={35} style={{ color: "#172554" }} />
+                <VscGithubAlt size={20} style={{ color: "737373" }} />
+              </div>
 
-          <CardHeader>
-            <CardTitle>Automated Appointment Scheduling Script</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <p>
-              A Python script automates the tracking of visa medical
-              appointments on the Bupa Medical Visa Services platform,
-              addressing the challenge of securing an appointment within the
-              required timeframe.
-            </p>
-          </CardContent>
-          <CardFooter className="font-mono text-xs">
-            <p>Python</p>
-          </CardFooter>
-        </Card>
-      </a>
+              <CardHeader>
+                <CardTitle>{project.project_title}</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p>{project.project_des}</p>
+              </CardContent>
+              <CardFooter className="font-mono text-xs">
+                <p className="flex space-x-3">
+                  {project.languages.map((language) => (
+                    <ul>{language}</ul>
+                  ))}
+                </p>
+              </CardFooter>
+            </Card>
+          </a>
+        ))}
+      </div>
     </section>
   )
 }
