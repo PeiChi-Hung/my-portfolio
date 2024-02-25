@@ -17,7 +17,7 @@ export default function Projects() {
       className="my-4 mb-[50px] flex flex-col items-center gap-5 text-center md:mt-8"
     >
       <h2>Projects</h2>
-      <div className="flex w-full flex-row gap-4">
+      <div className="flex flex-wrap justify-evenly gap-3 md:gap-5 md:px-6 lg:justify-center">
         {project_data.map((project) => (
           <a
             href={project.link}
