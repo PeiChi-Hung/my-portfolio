@@ -36,8 +36,8 @@ export default function Projects() {
               <CardContent>
                 <p>{project.project_des}</p>
               </CardContent>
-              <CardFooter className="font-mono text-xs absolute bottom-1">
-                <p className="flex space-x-3">
+              <CardFooter className="font-mono text-xs absolute bottom-1 overflow-auto">
+                <p className="flex flex-wrap gap-x-3 gap-y-1">
                   {project.languages.map((language) => (
                     <ul>{language}</ul>
                   ))}

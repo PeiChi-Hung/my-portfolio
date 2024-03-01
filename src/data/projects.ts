@@ -20,4 +20,17 @@ export const project_data: projectType[] = [
     languages: ["Next.js", "React", "TypeScript", "TailwindCSS"],
     link: "https://github.com/PeiChi-Hung/booking-system",
   },
+  {
+    project_title: "Personal Cookbook",
+    project_des: "A simple way to manage your favorite recipes.",
+    languages: [
+      "Vite.js",
+      "React",
+      "TypeScript",
+      "TailwindCSS",
+      "Netlify",
+      "mongoDB",
+    ],
+    link: "https://github.com/PeiChi-Hung/personal-cookbook",
+  },
 ]
