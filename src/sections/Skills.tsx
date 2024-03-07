@@ -15,6 +15,9 @@ import mongodbIcon from "@/assets/icons/mongodb.svg"
 import postmanIcon from "@/assets/icons/postman.svg"
 import gitIcon from "@/assets/icons/git.png"
 import vscodeIcon from "@/assets/icons/vscode.png"
+import tableauIcon from "@/assets/icons/tableau.png"
+import rstudioIcon from "@/assets/icons/rstudio.png"
+import powerBIIcon from "@/assets/icons/powerbi.png"
 
 export default function Skills() {
   const data = [
@@ -91,6 +94,20 @@ export default function Skills() {
         {
           name: "MongoDB",
           icon: mongodbIcon,
+        },
+      ],
+    },
+    {
+      title: "Data Analysis & Visualisation",
+      skills: [
+        { name: "R", icon: rstudioIcon },
+        {
+          name: "PowerBI",
+          icon: powerBIIcon,
+        },
+        {
+          name: "Tableau",
+          icon: tableauIcon,
         },
       ],
     },
