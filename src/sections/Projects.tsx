@@ -29,7 +29,6 @@ export default function Projects() {
                 <CiFolderOn size={35} style={{ color: "#172554" }} />
                 <VscGithubAlt size={20} style={{ color: "737373" }} />
               </div>
-
               <CardHeader>
                 <CardTitle>{project.project_title}</CardTitle>
               </CardHeader>

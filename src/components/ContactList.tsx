@@ -14,7 +14,7 @@ const contacts: Contact[] = [
   {
     name: "Email",
     className: "bg-neutral-500 hover:bg-neutral-600",
-    href: "mailto:pattyhung72@gmail.com",
+    href: "mailto:peichi.dev@gmail.com",
     icon: <MdEmail size={86} />,
   },
   {
