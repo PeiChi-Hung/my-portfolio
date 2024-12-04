@@ -27,4 +27,4 @@ dist-ssr
 .netlify
 
 # 3D models 
-.glb
+*.glb

@@ -1,4 +1,4 @@
-import { AvatarSitting } from "@/components/AvatarSitting"
+import { AvatarSitting } from "@/components/3d/AvatarSitting"
 
 export default function About() {
   return (
