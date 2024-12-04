@@ -1,10 +1,10 @@
-import React from "react"
-import ReactDOM from "react-dom/client"
-import App from "./App.tsx"
-import "./index.css"
-import Navbar from "./sections/Navbar.tsx"
-import GridBackground from "./components/GridBackground.tsx"
-import BackToTop from "./components/BackToTop.tsx"
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App.tsx";
+import BackToTop from "./components/BackToTop.tsx";
+import GridBackground from "./components/GridBackground.tsx";
+import Navbar from "./sections/Navbar.tsx";
+import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
@@ -15,4 +15,4 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
     </main>
     <BackToTop />
   </React.StrictMode>
-)
+);
