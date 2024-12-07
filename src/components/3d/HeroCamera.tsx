@@ -8,7 +8,7 @@ const HeroCamera = ({ children }: JSX.IntrinsicElements["group"]) => {
 
   useFrame((state, delta) => {
     easing.dampE(
-      groupRef.current?.rotation,
+      groupRef.current?.rotation!,
       [-state.pointer.y / 20, -state.pointer.x / 20, 0],
       0.25,
       delta
