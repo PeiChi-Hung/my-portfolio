@@ -47,7 +47,7 @@ export function Room(props: JSX.IntrinsicElements["group"]) {
         castShadow
         receiveShadow
         geometry={nodes.Wall.geometry}
-        material={nodes.Wall.material}
+        material={materials.white_plas}
         position={[4.867, 3.146, -0.53]}
         rotation={[0, Math.PI / 2, 0]}
       />
@@ -70,8 +70,9 @@ export function Room(props: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.Floor.geometry}
         material={materials.Floor}
-        position={[4.867, 3.146, -0.53]}
+        position={[4.962, 3.146, -0.53]}
         rotation={[0, Math.PI / 2, 0]}
+        scale={[1, 1, 1.616]}
       />
       <mesh
         castShadow
@@ -86,8 +87,9 @@ export function Room(props: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.FloorSide.geometry}
         material={nodes.FloorSide.material}
-        position={[4.867, 3.146, -0.53]}
+        position={[4.962, 3.146, -0.53]}
         rotation={[0, Math.PI / 2, 0]}
+        scale={[1, 1, 1.616]}
       />
       <mesh
         castShadow
