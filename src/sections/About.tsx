@@ -1,10 +1,10 @@
-import { AvatarSitting } from "@/components/3d/AvatarSitting"
+import { AvatarWaving } from "@/components/3d/AvatarWaving"
 
 export default function About() {
   return (
     <section
       id="about"
-      className="mx-auto my-16 flex flex-col items-center justify-center gap-4 px-2 md:my-20  md:max-w-full lg:flex-row lg:items-stretch lg:gap-16"
+      className="mx-auto my-16 flex flex-col items-center justify-center gap-4 px-2 md:my-20 md:max-w-full lg:flex-row lg:items-stretch lg:gap-16"
     >
       <div className="order-2 lg:order-1 lg:w-2/3">
         <h2 className="mb-3 w-full text-center md:mb-6">About Me</h2>
@@ -40,9 +40,7 @@ export default function About() {
         </article>
       </div>
       <div className="lg:order-2 lg:w-1/3">
-        <div className="w-full h-full">
-          <AvatarSitting />
-        </div>
+        <div className="w-full h-full">{/* <AvatarWaving /> */}</div>
       </div>
     </section>
   )

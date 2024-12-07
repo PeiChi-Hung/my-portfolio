@@ -1,24 +1,22 @@
+// import { AvatarSitting } from "@/components/3d/AvatarSitting"
+import { AvatarWaving } from "@/components/3d/AvatarWaving"
 import ContactList from "@/components/ContactList"
+import { motion } from "motion/react"
 
 export default function Hero() {
   return (
-    <section className="my-8 flex flex-col items-center justify-center">
-      <div className="p-3 md:p-4">
-        <img
-          src="/avatar.jpg"
-          alt="avatar"
-          className="w-[150px] h-[150px] object-center object-cover rounded-full animate-bounce-low"
-        />
+    <section className="hero h-full border border-red-300 flex lg:flex-row lg:items-stretch lg:p-0">
+      {/* <motion.div
+        className="w-1/2 flex flex-col justify-center gap-4"
+        animate={{ x: 100, transition: { duration: 2 } }}
+      >
+        <h1 className="text-[1.4rem] md:text-[2rem]">Hi, I'm Patty Hung</h1>
+        <h1>An Aspiring Software Developer</h1>
+        <ContactList />
+      </motion.div> */}
+      <div className="w-full">
+        <AvatarWaving />
       </div>
-
-      <h1 className="mb-4 text-[1.4rem] md:text-[2rem]">Hi, I'm Patty Hung</h1>
-      <h1 className="text-center">An Aspiring Software Developer</h1>
-      <div className="my-8 flex w-full flex-col gap-2 text-center lg:w-[50%]">
-        <h2 className="mb-4 text-[1.4rem] md:text-[2rem]">
-          Welcome to my page!
-        </h2>
-      </div>
-      <ContactList />
     </section>
   )
 }
