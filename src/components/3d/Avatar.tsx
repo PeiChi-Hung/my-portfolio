@@ -11,96 +11,68 @@ import { GLTF, SkeletonUtils } from "three-stdlib"
 import { useRef } from "react"
 import { Group } from "three"
 
-type ActionName = "Armature|mixamo.com|Layer0"
-
-interface GLTFAction extends THREE.AnimationClip {
-  name: ActionName
-}
-
 type GLTFResult = GLTF & {
   nodes: {
     Hair: THREE.Mesh
     Ankle: THREE.SkinnedMesh
     Eye_Lash: THREE.SkinnedMesh
+    Mesh021: THREE.SkinnedMesh
+    Mesh021_1: THREE.SkinnedMesh
     Eyebrow: THREE.SkinnedMesh
     Face: THREE.SkinnedMesh
-    Plane001: THREE.SkinnedMesh
-    Plane001_1: THREE.SkinnedMesh
-    Plane001_2: THREE.SkinnedMesh
-    Plane001_3: THREE.SkinnedMesh
-    Plane001_4: THREE.SkinnedMesh
-    Hand_: THREE.SkinnedMesh
+    Plane003: THREE.SkinnedMesh
+    Plane003_1: THREE.SkinnedMesh
+    Plane003_2: THREE.SkinnedMesh
+    Plane003_3: THREE.SkinnedMesh
+    Plane003_4: THREE.SkinnedMesh
+    Hand: THREE.SkinnedMesh
     Hoodie: THREE.SkinnedMesh
-    Long_pants: THREE.SkinnedMesh
+    Long_Pants: THREE.SkinnedMesh
     Vans: THREE.SkinnedMesh
-    Tiny_Eye_1001: THREE.SkinnedMesh
-    Tiny_Eye_1001_1: THREE.SkinnedMesh
     Eye_Highlight: THREE.SkinnedMesh
     mixamorigHips: THREE.Bone
   }
   materials: {
     Hair: THREE.MeshStandardMaterial
     Skin: THREE.MeshStandardMaterial
-    Basic_Glass: THREE.MeshStandardMaterial
-    Screw: THREE.MeshStandardMaterial
-    Glasses: THREE.MeshStandardMaterial
+    ["Tiny Iris 1.3 (Style Amber)"]: THREE.MeshStandardMaterial
+    ["Tiny Sclera 1.3 (Style Amber)"]: THREE.MeshPhysicalMaterial
+    Glasses: THREE.MeshPhysicalMaterial
     ["Nose pad"]: THREE.MeshStandardMaterial
+    Screw: THREE.MeshStandardMaterial
+    Plastic: THREE.MeshPhysicalMaterial
     Material: THREE.MeshStandardMaterial
     Hoodie: THREE.MeshStandardMaterial
     Pants: THREE.MeshStandardMaterial
     VansShoeMaterial: THREE.MeshStandardMaterial
-    ["Tiny Iris 1.3 (Style Amber)"]: THREE.MeshStandardMaterial
-    ["Tiny Sclera 1.3 (Style Amber)"]: THREE.MeshPhysicalMaterial
     ["Eye Highlight"]: THREE.MeshStandardMaterial
   }
-  animations: GLTFAction[]
 }
 
 export function Avatar(props: JSX.IntrinsicElements["group"]) {
   const group = useRef<Group>(null)
-  const { scene, animations } = useGLTF("models/avatar-waving.glb")
-  animations[0].name = "Waving"
+  const { scene, animations } = useGLTF("models/avatar.glb")
   const clone = React.useMemo(() => SkeletonUtils.clone(scene), [scene])
   const { nodes, materials } = useGraph(clone) as GLTFResult
   const { actions } = useAnimations(animations, group)
-  console.log(actions)
-  console.log(animations)
+  console.log(actions["Waving"])
 
-  // useEffect(() => {
-  //   actions["Waving"]?.play()
-  // })
+  useEffect(() => {
+    actions["Waving"]!.clampWhenFinished = true
+    actions["Waving"]!.loop = THREE.LoopOnce
+    actions["Waving"]?.play()
+  }, [])
+
   return (
     <group ref={group} {...props} dispose={null}>
       <group name="Scene">
-        <group name="Armature" rotation={[Math.PI / 2, 0, 0]} scale={0.01}>
+        <group name="Boy" rotation={[Math.PI / 2, 0, 0]} scale={0.01}>
           <skinnedMesh
             name="Ankle"
             geometry={nodes.Ankle.geometry}
             material={materials.Skin}
             skeleton={nodes.Ankle.skeleton}
           />
-          <group name="Brown_Amber_Stylised">
-            <skinnedMesh
-              name="Tiny_Eye_1001"
-              geometry={nodes.Tiny_Eye_1001.geometry}
-              material={materials["Tiny Iris 1.3 (Style Amber)"]}
-              skeleton={nodes.Tiny_Eye_1001.skeleton}
-              morphTargetDictionary={nodes.Tiny_Eye_1001.morphTargetDictionary}
-              morphTargetInfluences={nodes.Tiny_Eye_1001.morphTargetInfluences}
-            />
-            <skinnedMesh
-              name="Tiny_Eye_1001_1"
-              geometry={nodes.Tiny_Eye_1001_1.geometry}
-              material={materials["Tiny Sclera 1.3 (Style Amber)"]}
-              skeleton={nodes.Tiny_Eye_1001_1.skeleton}
-              morphTargetDictionary={
-                nodes.Tiny_Eye_1001_1.morphTargetDictionary
-              }
-              morphTargetInfluences={
-                nodes.Tiny_Eye_1001_1.morphTargetInfluences
-              }
-            />
-          </group>
           <skinnedMesh
             name="Eye_Highlight"
             geometry={nodes.Eye_Highlight.geometry}
@@ -115,6 +87,20 @@ export function Avatar(props: JSX.IntrinsicElements["group"]) {
             material={materials.Hair}
             skeleton={nodes.Eye_Lash.skeleton}
           />
+          <group name="Eyeball">
+            <skinnedMesh
+              name="Mesh021"
+              geometry={nodes.Mesh021.geometry}
+              material={materials["Tiny Iris 1.3 (Style Amber)"]}
+              skeleton={nodes.Mesh021.skeleton}
+            />
+            <skinnedMesh
+              name="Mesh021_1"
+              geometry={nodes.Mesh021_1.geometry}
+              material={materials["Tiny Sclera 1.3 (Style Amber)"]}
+              skeleton={nodes.Mesh021_1.skeleton}
+            />
+          </group>
           <skinnedMesh
             name="Eyebrow"
             geometry={nodes.Eyebrow.geometry}
@@ -129,41 +115,41 @@ export function Avatar(props: JSX.IntrinsicElements["group"]) {
           />
           <group name="Glasses">
             <skinnedMesh
-              name="Plane001"
-              geometry={nodes.Plane001.geometry}
-              material={materials.Basic_Glass}
-              skeleton={nodes.Plane001.skeleton}
-            />
-            <skinnedMesh
-              name="Plane001_1"
-              geometry={nodes.Plane001_1.geometry}
-              material={materials.Screw}
-              skeleton={nodes.Plane001_1.skeleton}
-            />
-            <skinnedMesh
-              name="Plane001_2"
-              geometry={nodes.Plane001_2.geometry}
+              name="Plane003"
+              geometry={nodes.Plane003.geometry}
               material={materials.Glasses}
-              skeleton={nodes.Plane001_2.skeleton}
+              skeleton={nodes.Plane003.skeleton}
             />
             <skinnedMesh
-              name="Plane001_3"
-              geometry={nodes.Plane001_3.geometry}
+              name="Plane003_1"
+              geometry={nodes.Plane003_1.geometry}
               material={materials["Nose pad"]}
-              skeleton={nodes.Plane001_3.skeleton}
+              skeleton={nodes.Plane003_1.skeleton}
             />
             <skinnedMesh
-              name="Plane001_4"
-              geometry={nodes.Plane001_4.geometry}
+              name="Plane003_2"
+              geometry={nodes.Plane003_2.geometry}
+              material={materials.Screw}
+              skeleton={nodes.Plane003_2.skeleton}
+            />
+            <skinnedMesh
+              name="Plane003_3"
+              geometry={nodes.Plane003_3.geometry}
+              material={materials.Plastic}
+              skeleton={nodes.Plane003_3.skeleton}
+            />
+            <skinnedMesh
+              name="Plane003_4"
+              geometry={nodes.Plane003_4.geometry}
               material={materials.Material}
-              skeleton={nodes.Plane001_4.skeleton}
+              skeleton={nodes.Plane003_4.skeleton}
             />
           </group>
           <skinnedMesh
-            name="Hand_"
-            geometry={nodes.Hand_.geometry}
+            name="Hand"
+            geometry={nodes.Hand.geometry}
             material={materials.Skin}
-            skeleton={nodes.Hand_.skeleton}
+            skeleton={nodes.Hand.skeleton}
           />
           <skinnedMesh
             name="Hoodie"
@@ -172,10 +158,10 @@ export function Avatar(props: JSX.IntrinsicElements["group"]) {
             skeleton={nodes.Hoodie.skeleton}
           />
           <skinnedMesh
-            name="Long_pants"
-            geometry={nodes.Long_pants.geometry}
+            name="Long_Pants"
+            geometry={nodes.Long_Pants.geometry}
             material={materials.Pants}
-            skeleton={nodes.Long_pants.skeleton}
+            skeleton={nodes.Long_Pants.skeleton}
           />
           <skinnedMesh
             name="Vans"
@@ -190,4 +176,4 @@ export function Avatar(props: JSX.IntrinsicElements["group"]) {
   )
 }
 
-useGLTF.preload("models/avatar-waving.glb")
+useGLTF.preload("models/avatar.glb")

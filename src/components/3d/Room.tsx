@@ -23,17 +23,25 @@ type GLTFResult = GLTF & {
     Window: THREE.Mesh
     Object_9001: THREE.Mesh
     Object_9001_1: THREE.Mesh
+    DARK_PLASTIC_POT_DARK_PLASTIC_POT_Mat_0: THREE.Mesh
+    DYPSIS_LUTESCENS_DYPSIS_LUTESCENS_Mat_0: THREE.Mesh
+    wallpaper: THREE.Mesh
   }
   materials: {
     white_fin_trans: THREE.MeshStandardMaterial
     white_plas: THREE.MeshStandardMaterial
     thread: THREE.MeshStandardMaterial
     ["Material.004"]: THREE.MeshStandardMaterial
+    ["Material.002"]: THREE.MeshStandardMaterial
     ["05_-_Default"]: THREE.MeshStandardMaterial
     Floor: THREE.MeshStandardMaterial
     Desk: THREE.MeshStandardMaterial
     Metal_Silver_Mat: THREE.MeshStandardMaterial
     Shiny_VarnishPlastic_Black: THREE.MeshPhysicalMaterial
+    DARK_PLASTIC_POT_Mat: THREE.MeshPhysicalMaterial
+    DYPSIS_LUTESCENS_DYPSIS_LUTESCENS_Mat_0: THREE.MeshPhysicalMaterial
+    DYPSIS_LUTESCENS_Mat: THREE.MeshPhysicalMaterial
+    wallpaper: THREE.MeshPhysicalMaterial
   }
   //   animations: GLTFAction[]
 }
@@ -47,7 +55,7 @@ export function Room(props: JSX.IntrinsicElements["group"]) {
         castShadow
         receiveShadow
         geometry={nodes.Wall.geometry}
-        material={materials.white_plas}
+        material={materials["Material.002"]}
         position={[4.867, 3.146, -0.53]}
         rotation={[0, Math.PI / 2, 0]}
       />
@@ -78,7 +86,7 @@ export function Room(props: JSX.IntrinsicElements["group"]) {
         castShadow
         receiveShadow
         geometry={nodes.DeskStorage.geometry}
-        material={nodes.DeskStorage.material}
+        material={materials["Material.002"]}
         position={[4.867, 3.146, -0.53]}
         rotation={[0, Math.PI / 2, 0]}
       />
@@ -103,7 +111,7 @@ export function Room(props: JSX.IntrinsicElements["group"]) {
         castShadow
         receiveShadow
         geometry={nodes.Monitor.geometry}
-        material={nodes.Monitor.material}
+        material={materials.DARK_PLASTIC_POT_Mat}
         position={[5.713, 3.146, -0.53]}
         rotation={[0, Math.PI / 2, 0]}
       />
@@ -115,7 +123,7 @@ export function Room(props: JSX.IntrinsicElements["group"]) {
         position={[4.867, 3.146, -0.53]}
         rotation={[0, Math.PI / 2, 0]}
       />
-      <group position={[1.161, 2.716, -5.077]} scale={[0.741, 0.741, 0.455]}>
+      <group position={[1.161, 2.659, -5.13]} scale={[0.741, 0.741, 0.455]}>
         <mesh
           castShadow
           receiveShadow
@@ -157,6 +165,43 @@ export function Room(props: JSX.IntrinsicElements["group"]) {
           </group>
         </group>
       </group>
+      <group
+        position={[3.171, 0, 2.146]}
+        rotation={[-Math.PI / 2, 0, 0]}
+        scale={2.667}
+      >
+        <group rotation={[Math.PI / 2, 0, 0]} scale={0.01}>
+          <group rotation={[-Math.PI / 2, 0, 0]} scale={100}>
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.DARK_PLASTIC_POT_DARK_PLASTIC_POT_Mat_0.geometry}
+              material={materials.DARK_PLASTIC_POT_Mat}
+              position={[0.265, 0, 0]}
+              scale={0.749}
+            />
+          </group>
+          <group rotation={[-Math.PI / 2, 0, 0]} scale={100}>
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.DYPSIS_LUTESCENS_DYPSIS_LUTESCENS_Mat_0.geometry}
+              material={materials.DYPSIS_LUTESCENS_Mat}
+              position={[0.265, 0, 0]}
+              scale={0.749}
+            />
+          </group>
+        </group>
+      </group>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.wallpaper.geometry}
+        material={materials.wallpaper}
+        position={[1.163, 3.415, -4.524]}
+        rotation={[Math.PI / 2, 0, 0]}
+        scale={[1.359, 1.359, 1.42]}
+      />
     </group>
   )
 }

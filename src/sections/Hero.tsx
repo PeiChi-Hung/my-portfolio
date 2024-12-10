@@ -14,7 +14,7 @@ export default function Hero() {
       </div>
 
       <motion.div
-        className="absolute flex flex-col lg:top-1/4 gap-4"
+        className="absolute flex flex-col lg:top-1/3 gap-4"
         animate={{ x: 100, transition: { duration: 2 } }}
       >
         <h1 className="text-[1.4rem] md:text-[2rem]">Hi, I'm Patty Hung</h1>
