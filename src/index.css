@@ -92,6 +92,9 @@
   .hero {
     height: calc(100vh - 70px);
   }
+  .hero-mobile {
+    height: calc(50dvh);
+  }
 }
 
 @media (min-width: 768px) {
