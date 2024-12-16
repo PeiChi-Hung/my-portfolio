@@ -47,7 +47,7 @@ type GLTFResult = GLTF & {
 }
 
 export function Room(props: JSX.IntrinsicElements["group"]) {
-  const { nodes, materials } = useGLTF("models/room.glb") as GLTFResult
+  const { nodes, materials } = useGLTF("models/room-resize.glb") as GLTFResult
 
   return (
     <group {...props} dispose={null}>
@@ -206,4 +206,4 @@ export function Room(props: JSX.IntrinsicElements["group"]) {
   )
 }
 
-useGLTF.preload("/room.glb")
+useGLTF.preload("/room-resize.glb")
