@@ -3,7 +3,7 @@ import * as THREE from "three";
 export const calculateSizes = (isMobile: boolean, isTablet: boolean) => {
   return {
     // index for desk
-    deskScale: isMobile ? 1.2 : isTablet ? 1.25 : 3,
+    deskScale: isMobile ? 1.4 : isTablet ? 1.25 : 3,
     deskPosition: isMobile
       ? new THREE.Vector3(-7.3, -5.5, 0.5)
       : isTablet

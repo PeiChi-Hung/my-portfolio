@@ -1,24 +1,13 @@
-import { PerspectiveCamera } from "@react-three/drei";
-import { Canvas } from "@react-three/fiber";
-import { Avatar } from "./Avatar";
-import { Room } from "./Room";
-import { Leva, useControls } from "leva";
-import { useMediaQuery } from "react-responsive";
-import HeroCamera from "./HeroCamera";
 import { calculateSizes } from "@/constants";
+import { PerspectiveCamera, Preload } from "@react-three/drei";
+import { Canvas } from "@react-three/fiber";
+
+import { useMediaQuery } from "react-responsive";
+import { Avatar } from "./Avatar";
+import HeroCamera from "./HeroCamera";
+import { Room } from "./Room";
 
 export const AvatarWaving = () => {
-  // const controls = useControls("Room", {
-  //   scale: { value: 1, min: 0, max: 5 },
-  //   rotationX: { value: 0.1, min: -10, max: 10 },
-  //   rotationY: { value: 0, min: -10, max: 10 },
-  //   rotationZ: { value: 0, min: -10, max: 10 },
-  //   positionX: { value: -5.1, min: -10, max: 10 },
-  //   positionY: { value: -1.9, min: -10, max: 30 },
-  //   positionZ: { value: 22.5, min: -10, max: 30 },
-  // });
-
-  // const isSmall = useMediaQuery({ maxWidth: 440 })
   const isMobile = useMediaQuery({ maxWidth: 768 });
   const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1024 });
 
@@ -26,7 +15,6 @@ export const AvatarWaving = () => {
 
   return (
     <div className="h-full w-full">
-      {/* <Leva /> */}
       <Canvas className="w-full">
         <PerspectiveCamera makeDefault position={[-7, 3.7, 24.7]} />I
         <HeroCamera>
@@ -41,8 +29,9 @@ export const AvatarWaving = () => {
           rotation={sizes.avatarRotation}
           position={sizes.avatarPosition}
         />
-        <ambientLight intensity={3} />
-        <directionalLight position={[10, 10, 10]} />
+        <Preload all />
+        <ambientLight intensity={3.2} />
+        <directionalLight position={[10, 20, 30]} />
       </Canvas>
     </div>
   );
