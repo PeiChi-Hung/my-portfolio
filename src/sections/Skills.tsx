@@ -18,6 +18,7 @@ import vscodeIcon from "@/assets/icons/vscode.png"
 import tableauIcon from "@/assets/icons/tableau.png"
 import rstudioIcon from "@/assets/icons/rstudio.png"
 import powerBIIcon from "@/assets/icons/powerbi.png"
+import fastAPIIcon from "@/assets/icons/FastAPI.png"
 
 export default function Skills() {
   const data = [
@@ -60,6 +61,10 @@ export default function Skills() {
         {
           name: "Prettier",
           icon: prettierIcon,
+        },
+        {
+          name: "FastAPI",
+          icon: fastAPIIcon,
         },
       ],
     },
