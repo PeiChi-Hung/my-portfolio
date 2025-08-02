@@ -1,24 +1,26 @@
-import { SkillCard } from "@/components/SkillCard"
-import reactIcon from "@/assets/icons/react.png"
-import nextjsIcon from "@/assets/icons/next-js.png"
-import typescriptIcon from "@/assets/icons/typescript.png"
-import javascriptIcon from "@/assets/icons/javascript.png"
-import tailwindcssIcon from "@/assets/icons/tailwindcss.png"
-import shadcnuiIcon from "@/assets/icons/shadcn-ui.png"
-import html5Icon from "@/assets/icons/html5.png"
-import viteIcon from "@/assets/icons/vite.png"
-import prettierIcon from "@/assets/icons/prettier.png"
-import pythonIcon from "@/assets/icons/python.png"
-import nodejsIcon from "@/assets/icons/nodejs.png"
-import prismaIcon from "@/assets/icons/prisma.png"
-import mongodbIcon from "@/assets/icons/mongodb.svg"
-import postmanIcon from "@/assets/icons/postman.svg"
-import gitIcon from "@/assets/icons/git.png"
-import vscodeIcon from "@/assets/icons/vscode.png"
-import tableauIcon from "@/assets/icons/tableau.png"
-import rstudioIcon from "@/assets/icons/rstudio.png"
-import powerBIIcon from "@/assets/icons/powerbi.png"
-import fastAPIIcon from "@/assets/icons/FastAPI.png"
+import { SkillCard } from "@/components/SkillCard";
+import reactIcon from "@/assets/icons/react.png";
+import nextjsIcon from "@/assets/icons/next-js.png";
+import typescriptIcon from "@/assets/icons/typescript.png";
+import javascriptIcon from "@/assets/icons/javascript.png";
+import tailwindcssIcon from "@/assets/icons/tailwindcss.png";
+import shadcnuiIcon from "@/assets/icons/shadcn-ui.png";
+import html5Icon from "@/assets/icons/html5.png";
+import viteIcon from "@/assets/icons/vite.png";
+import prettierIcon from "@/assets/icons/prettier.png";
+import pythonIcon from "@/assets/icons/python.png";
+import nodejsIcon from "@/assets/icons/nodejs.png";
+import prismaIcon from "@/assets/icons/prisma.png";
+import mongodbIcon from "@/assets/icons/mongodb.svg";
+import postmanIcon from "@/assets/icons/postman.svg";
+import gitIcon from "@/assets/icons/git.png";
+import vscodeIcon from "@/assets/icons/vscode.png";
+import tableauIcon from "@/assets/icons/tableau.png";
+import rstudioIcon from "@/assets/icons/rstudio.png";
+import powerBIIcon from "@/assets/icons/powerbi.png";
+import fastAPIIcon from "@/assets/icons/FastAPI.png";
+import azureIcon from "@/assets/icons/azure.png";
+import awsIcon from "@/assets/icons/aws.png";
 
 export default function Skills() {
   const data = [
@@ -130,7 +132,17 @@ export default function Skills() {
         },
       ],
     },
-  ]
+    {
+      title: "Cloud & DevOps",
+      skills: [
+        { name: "Azure", icon: azureIcon },
+        {
+          name: "AWS",
+          icon: awsIcon,
+        },
+      ],
+    },
+  ];
   return (
     <section
       id="skills"
@@ -152,5 +164,5 @@ export default function Skills() {
         ))}
       </div>
     </section>
-  )
+  );
 }

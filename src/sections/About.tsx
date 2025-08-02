@@ -8,33 +8,27 @@ export default function About() {
         <h2 className="mb-3 w-full text-center md:mb-6">About Me</h2>
         <article className="flex flex-col gap-4 text-pretty">
           <p>
-            Hello! I'm Patty Hung, a fresh graduate of Bachelor of Commerce and
-            Computer Science student, majoring in Business Analytics and Data
-            Science. Throughout my academic journey, I have honed my abilities
-            in a diverse range of technologies, including R, SQL, Python,
-            GitHub, HTML/CSS, React, Tableau, and Power BI.
+            A junior software developer who enjoys turning ideas into clean,
+            responsive web apps. I’ve worked on real-world projects in startups
+            and edtech, where I got to build features, refactor messy
+            components, and help make things easier to use and maintain.
           </p>
           <p>
-            As a part of my final year project, I was actively involved in a
-            group project centred around electricity demand forecasting, which
-            holds a pivotal place in my academic curriculum. This hands-on
-            project has not only provided me with invaluable experience in
-            cutting-edge technologies like Azure, Machine Learning, and
-            full-stack web development, encompassing both frontend and backend
-            skills using React and Next.js but also exposed me to the
-            fundamentals of effective project management.
+            I’ve collaborated closely with lead devs to figure out user flows,
+            debug tricky issues, and test out new ideas to see what works. I
+            also enjoy using tools like GitHub Copilot and Cursor to speed
+            things up and solve problems more efficiently. Along the way, I’ve
+            helped with AWS deployment tasks and tracked work using Linear.
           </p>
 
           <p>
-            As I approach the culmination of my studies, I am enthusiastic about
-            starting a career as a software developer. My dedication to
-            continuous learning and problem-solving fuels my enthusiasm for
-            building innovative and user-centric applications. I am
-            wholeheartedly committed to utilizing my skills in Business
-            Analytics and Data Science to craft software solutions that not only
-            meet industry standards but also make a positive impact on the
-            company.
+            Right now, I’m looking for my next opportunity — ideally with a
+            supportive team where I can keep learning, write better code, and
+            contribute to something meaningful. I mostly work with React,
+            TypeScript, and Tailwind, and I’m always excited to pick up new
+            tools along the way.
           </p>
+          <p>Let’s build something cool together! </p>
         </article>
       </div>
       <div className="lg:order-2 lg:w-1/3">
@@ -50,5 +44,5 @@ export default function About() {
         />
       </div>
     </section>
-  )
+  );
 }
