@@ -1,5 +1,5 @@
 export default function Navbar() {
-  const links = ["about", "skills", "projects", "contact"]
+  const links = ["about", "experience", "skills", "projects", "contact"];
   return (
     <nav className="justify-center py-2 flex w-full select-none pt-6 font-light md:px-28 md:pb-2">
       <div className="container flex flex-col items-center justify-between md:flex-row">
@@ -14,7 +14,7 @@ export default function Navbar() {
               onClick={() => {
                 document
                   .getElementById(link)
-                  ?.scrollIntoView({ behavior: "smooth" })
+                  ?.scrollIntoView({ behavior: "smooth" });
               }}
             >
               {link.charAt(0).toUpperCase() + link.slice(1)}
@@ -23,5 +23,5 @@ export default function Navbar() {
         </div>
       </div>
     </nav>
-  )
+  );
 }
