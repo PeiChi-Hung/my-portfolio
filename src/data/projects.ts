@@ -1,8 +1,8 @@
 interface projectType {
-  project_title: string
-  project_des: string
-  languages: string[]
-  link: string
+  project_title: string;
+  project_des: string;
+  languages: string[];
+  link: string;
 }
 
 export const project_data: projectType[] = [
@@ -20,4 +20,11 @@ export const project_data: projectType[] = [
     languages: ["Next.js", "React", "TypeScript", "TailwindCSS"],
     link: "https://github.com/PeiChi-Hung/booking-system",
   },
-]
+  {
+    project_title: "Job Tracker CLI",
+    project_des:
+      "A Node.js command-line tool that streamlines job application management by automatically creating GitHub issues and organizing them in GitHub Projects V2 with structured tracking fields.",
+    languages: ["Node.js"],
+    link: "https://github.com/PeiChi-Hung/job-tracker-cli",
+  },
+];
